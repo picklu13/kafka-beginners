@@ -1,4 +1,4 @@
-package io.conduktor.demos.kafaka;
+package io.conduktor.demos.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;

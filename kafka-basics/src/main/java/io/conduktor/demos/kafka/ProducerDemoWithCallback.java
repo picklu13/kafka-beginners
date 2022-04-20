@@ -1,4 +1,4 @@
-package io.conduktor.demos.kafaka;
+package io.conduktor.demos.kafka;
 
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -20,9 +20,9 @@ public class ProducerDemoWithCallback {
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
 
-        for (int i = 0 ; i < 100; i++){
+        for (int i = 0 ; i < 1; i++){
             String key = "id_" + i;
-            ProducerRecord<String, String> record = new ProducerRecord<>("demo_java_1", key, "Hello_World");
+            ProducerRecord<String, String> record = new ProducerRecord<>("demo1", key, "Hello_World");
             producer.send(record, new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception exception) {
